@@ -1,0 +1,214 @@
+$primary-color: #f8da28;
+
+body {
+    margin: 0;
+    font-family: 'calibri';
+
+    .form {
+
+        label {
+            margin-bottom: 3px;
+            font-size: 18px;
+            color: #929292;
+            text-transform: uppercase;
+            display: block;
+        }
+        input {
+            padding: 10px;
+            border: 1px solid #e4e4e4;
+            width: calc(100% - 63px);
+        }
+        button {
+            background: $primary-color;
+            border: none;
+            height: 37px;
+            color: white;
+            font-weight: bold;
+            font-size: 23px;
+            position: relative;
+            top: 3px;
+            width: 37px;
+        }
+    }
+
+    #header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ed1c24;
+
+        img {
+            max-width: 70px;
+            margin: 10px 0;
+        }
+    }
+    #main {
+        padding: 20px;
+
+        .error, .error-winner {
+            color: red;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .error-winner {
+            margin-bottom: 20px;
+        }
+
+        .add-gamer {
+            margin-bottom: 30px;
+        }
+
+        .list-gamer {
+
+            .title {
+                margin-bottom: 3px;
+                font-size: 18px;
+                color: #929292;
+                text-transform: uppercase;
+                display: block;
+            }
+            .content {
+
+                .player {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 10px;
+
+                    .delete {
+                        border: none;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        font-size: 33px;
+                        margin-right: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0;
+                        background: none;
+                        color: #ed1c24;
+                    }
+                }
+            }
+        }
+        .play, .new-game, .enter-score, .maj {
+            background: #f8da28;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            font-size: 18px;
+            margin-top: 30px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .enter-score {
+            background: #ed1c24;
+            margin-bottom: -10px;
+            width: 100%;
+            margin-top: 0;
+        }
+        .new-game, .maj {
+            left: initial;
+            transform: initial;
+            font-size: 15px;
+            margin-top: 20px;
+        }
+        .maj {
+            background: #9a9a9a;
+        }
+
+        // Popup début de partie
+        #begin-play {
+            background: white;
+            position: absolute;
+            top: 80px;
+            left: 10px;
+            width: calc(100% - 20px);
+            height: calc(100% - 91px);
+            box-shadow: 0 0 15px rgba(214, 212, 212, 0.3);
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: auto;
+
+            .content {
+                padding: 0 20px;
+                position: relative;
+                left: 20px;
+
+                .user {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    border: 1px solid #dedddd;
+                    padding: 9px;
+                    border-radius: 2px;
+                    margin-bottom: 10px;
+                    position: relative;
+
+                    &.the-winner {
+
+                        .win {
+                            color: #ed1c24;
+                        }
+                    }
+
+                    .win {
+                        position: absolute;
+                        top: 50%;
+                        left: -45px;
+                        transform: translateY(-50%);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: #d6d6d6;
+                        font-size: 22px;
+                    }
+
+                    .name {
+                        font-weight: bold;
+
+                        .winner {
+
+                            margin-left: 5px;
+
+                            span {
+
+                                background: #ed1c24;
+                                width: 7px;
+                                height: 7px;
+                                display: inline-block;
+                                position: relative;
+                                border-radius: 50%;
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                    .points {
+
+                        input {
+                            background: #f1f1f1;
+                            width: 40px;
+                            border: none;
+                            padding: 3px 4px 0px;
+                            margin-right: 10px;
+                        }
+
+                        span {
+                            background: #f8da27;
+                            padding: 0 5px;
+                            width: 35px;
+                            display: inline-block;
+                            text-align: center;
+                        }
+                    }
+                    .historique {
+                        width: 100%;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

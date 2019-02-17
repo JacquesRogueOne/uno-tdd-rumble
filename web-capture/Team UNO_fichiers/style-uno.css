@@ -1,0 +1,211 @@
+body {
+  margin: 0;
+  font-family: 'calibri', 'Arial', 'SansSerif'; }
+  body .form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    body .form label {
+      margin-bottom: 3px;
+      font-size: 18px;
+      color: #929292;
+      text-transform: uppercase;
+      display: block;
+      width: 100%; }
+    body .form input {
+      padding: 10px;
+      border: 1px solid #e4e4e4;
+      width: calc(100% - 80px);
+      font-size: 16px; }
+    body .form button {
+      background: #f8da28;
+      border: none;
+      height: 40px;
+      color: white;
+      font-weight: bold;
+      font-size: 23px;
+      width: 40px;
+      text-align: center;
+      padding: 0; }
+  body #header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ed1c24; }
+    body #header img {
+      max-width: 70px;
+      margin: 10px 0; }
+  body #main {
+    padding: 20px; }
+    body #main .error, body #main .error-winner {
+      color: red;
+      text-align: center;
+      margin-top: 20px; }
+    body #main .error-winner {
+      margin-bottom: 20px; }
+    body #main .add-gamer {
+      margin-bottom: 30px; }
+    body #main .list-gamer .title {
+      margin-bottom: 3px;
+      font-size: 18px;
+      color: #929292;
+      text-transform: uppercase;
+      display: block; }
+    body #main .list-gamer .content .player {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px; }
+      body #main .list-gamer .content .player .delete {
+        border: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        font-size: 33px;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        background: none;
+        color: #ed1c24; }
+    body #main .play, body #main .enter-score {
+      background: #f8da28;
+      color: white;
+      border: none;
+      padding: 10px 30px;
+      font-size: 18px;
+      margin-top: 30px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%); }
+    body #main .enter-score {
+      background: #ed1c24;
+      width: 100%;
+      margin-top: 0; }
+    body #main .all-button {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      padding: 0 60px; }
+      body #main .all-button > button {
+        margin-top: 20px;
+        background: #f8da28;
+        color: white;
+        border: none;
+        padding: 10px 30px;
+        font-size: 18px; }
+        body #main .all-button > button.sort {
+          background: #464646; }
+        body #main .all-button > button.maj {
+          background: #9a9a9a; }
+    body #main #begin-play {
+      background: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      overflow: auto; }
+      body #main #begin-play .sortBy {
+        background: #f1f1f1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        padding: 50px 20px 20px;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%; }
+        body #main #begin-play .sortBy .cross-close {
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: #9e9e9e;
+          width: 100%;
+          padding: 6px 0;
+          text-align: center;
+          text-transform: uppercase;
+          font-weight: bold;
+          color: white;
+          font-size: 22px; }
+        body #main #begin-play .sortBy .sort-user {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 4px 12px;
+          border-bottom: 1px solid gainsboro; }
+          body #main #begin-play .sortBy .sort-user .sort-classement {
+            font-weight: bold;
+            font-size: 22px; }
+            body #main #begin-play .sortBy .sort-user .sort-classement > span {
+              font-weight: normal;
+              font-size: 15px;
+              position: relative;
+              top: -6px;
+              left: 2px; }
+      body #main #begin-play > .content {
+        padding: 0 20px;
+        position: relative;
+        left: 20px;
+        display: flex;
+        flex-wrap: wrap; }
+        body #main #begin-play > .content .user {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          align-items: center;
+          border: 1px solid #dedddd;
+          padding: 9px;
+          border-radius: 2px;
+          margin-bottom: 10px;
+          position: relative;
+          width: 100%; }
+          body #main #begin-play > .content .user.the-winner .win {
+            color: #ed1c24; }
+          body #main #begin-play > .content .user .win {
+            position: absolute;
+            top: 50%;
+            left: -45px;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d6d6d6;
+            font-size: 22px; }
+          body #main #begin-play > .content .user .name {
+            font-weight: bold; }
+            body #main #begin-play > .content .user .name .winner {
+              margin-left: 5px; }
+              body #main #begin-play > .content .user .name .winner span {
+                background: #ed1c24;
+                width: 7px;
+                height: 7px;
+                display: inline-block;
+                position: relative;
+                border-radius: 50%;
+                margin-left: 5px; }
+          body #main #begin-play > .content .user .points {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end; }
+            body #main #begin-play > .content .user .points input {
+              background: #f1f1f1;
+              width: 40px;
+              border: none;
+              padding: 3px 4px 0px;
+              margin-right: 10px;
+              font-size: 16px; }
+            body #main #begin-play > .content .user .points span {
+              background: #f8da27;
+              padding: 0 5px;
+              width: 35px;
+              display: inline-block;
+              text-align: center;
+              margin-right: 5px; }
+          body #main #begin-play > .content .user .historique {
+            width: 100%;
+            font-size: 12px; }
+
+/*# sourceMappingURL=style-uno.css.map */

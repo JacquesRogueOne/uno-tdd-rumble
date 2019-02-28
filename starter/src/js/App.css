@@ -1,3 +1,52 @@
+body{
+  margin: 0;
+  font-family: 'Arial';
+}
+
 header{
   background-color: #ed1c24;
+  text-align: center;
+  padding: 10px;
+}
+
+header img{
+  height: 50px;
+}
+
+main{
+  padding: 25px;
+}
+
+.addPlayer{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.addPlayerField{
+  width: calc(100% - 60px);
+}
+
+.addPlayerField label{
+  text-transform: uppercase;
+  display: block;
+  color: grey;
+  margin-bottom: 5px;
+}
+
+.addPlayerField input {
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+  box-sizing: border-box;
+}
+
+.addPlayerButton {
+  background-color: #ed1c24;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  color: white;
+  border: 1px solid #ed1c24;
+  border-radius: 2px;
 }

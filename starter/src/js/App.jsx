@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
 import Header from './components/header/index.jsx';
+import Main from './components/main/index.jsx';
 import Footer from './components/footer/index.jsx';
 
 class App extends Component {
@@ -13,6 +14,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <Header />
+        <Main />
         <Footer />
       </React.Fragment>
     );

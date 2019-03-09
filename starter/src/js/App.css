@@ -17,6 +17,15 @@ main{
   padding: 25px;
 }
 
+h2 {
+  text-transform: uppercase;
+  display: block;
+  color: grey;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: normal;
+}
+
 .addPlayer{
   display: flex;
   align-items: flex-end;
@@ -49,4 +58,10 @@ main{
   color: white;
   border: 1px solid #ed1c24;
   border-radius: 2px;
+}
+
+.playerList{
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }

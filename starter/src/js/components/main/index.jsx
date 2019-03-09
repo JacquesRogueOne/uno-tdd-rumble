@@ -1,16 +1,14 @@
 import React, { Component } from "react";
 
-import AddPlayerField from "./components/add-player-field/index.jsx";
-import AddPlayerButton from "./components/add-player-button/index.jsx";
+import PlayerList from "./components/player-list/index.jsx";
+import AddPlayer from "./components/add-player/index.jsx";
 
 const Main = () => {
 
   return (
     <main>
-      <div className="addPlayer">
-        <AddPlayerField />
-        <AddPlayerButton />
-      </div>
+      <AddPlayer />
+      <PlayerList />
     </main>
   );
 }

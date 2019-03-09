@@ -4,7 +4,7 @@ const Footer = () => {
 
   return (
     <footer>
-      copyright
+      copyleft
     </footer>
   );
 }

@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import style from "./style.css";
 
 const AddPlayerButton = () => {
 
   return (
-      <button className="addPlayerButton">+</button>
+      <button className={style.addPlayerButton}>+</button>
   );
 }
 

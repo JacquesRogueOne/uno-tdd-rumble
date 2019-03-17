@@ -1,0 +1,21 @@
+.textBlue {
+    color: blue;
+    font-size: 40px;
+}
+.addPlayerField{
+    width: calc(100% - 60px);
+}
+  
+.addPlayerField label{
+    text-transform: uppercase;
+    display: block;
+    color: grey;
+    margin-bottom: 5px;
+}
+
+.addPlayerField input {
+    width: 100%;
+    padding: 5px;
+    height: 30px;
+    box-sizing: border-box;
+}

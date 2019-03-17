@@ -3,14 +3,22 @@ import React, { Component } from "react";
 import PlayerList from "./components/player-list/index.jsx";
 import AddPlayer from "./components/add-player/index.jsx";
 
-const Main = () => {
+class Main extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      players: []
+    }
+  }
 
-  return (
-    <main>
-      <AddPlayer />
-      <PlayerList />
-    </main>
-  );
+  render() {
+    return (
+      <main>
+        <AddPlayer />
+        {/* <PlayerList /> */}
+      </main>
+    );
+  }
 }
 
 export default Main;

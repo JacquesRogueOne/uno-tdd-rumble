@@ -11,10 +11,15 @@ class Main extends Component {
     }
   }
 
+  clickButton(value) {
+    const {players} = this.state;
+    this.setState({players: [...players, value]})
+  }
+
   render() {
     return (
       <main>
-        <AddPlayer />
+        <AddPlayer clickButton={this.clickButton} />
         {/* <PlayerList /> */}
       </main>
     );

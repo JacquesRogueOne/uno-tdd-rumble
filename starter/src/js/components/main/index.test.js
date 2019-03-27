@@ -24,3 +24,10 @@ test("players ", () => {
     const wrapper = wrap();
     expect(wrapper.state().players).toEqual([]);
 })
+
+test("renameMePlease", () => {
+    const wrapper = wrap();
+    /* action */
+    wrapper.find('AddPlayer').simulate('click')
+    expect(wrapper.state().players).toEqual([''])
+})

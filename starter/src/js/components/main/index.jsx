@@ -9,6 +9,8 @@ class Main extends Component {
     this.state = {
       players: []
     }
+
+    this.clickButton = this.clickButton.bind(this);
   }
 
   clickButton(value) {

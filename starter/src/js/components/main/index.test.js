@@ -1,9 +1,10 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 
 import Main from ".";
 
 const wrap = () => shallow(<Main />);
+const wrapMount = () => mount(<Main />);
 
 test("add player is always displayed", () => {
     const wrapper = wrap();
@@ -26,8 +27,8 @@ test("players ", () => {
 })
 
 test("renameMePlease", () => {
-    const wrapper = wrap();
+    const wrapper = wrapMount();
     /* action */
-    wrapper.find('AddPlayer').simulate('click')
+    wrapper.find('button').simulate('click')
     expect(wrapper.state().players).toEqual([''])
 })

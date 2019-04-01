@@ -15,6 +15,10 @@ class AddPlayer extends Component {
     this.state = {
       name: ""
     };
+
+    this.registerPlayer = this.registerPlayer.bind(this)
+    this.onChangePlayerName = this.onChangePlayerName.bind(this)
+
   }
 
   onChangePlayerName(event) {
@@ -23,6 +27,7 @@ class AddPlayer extends Component {
 
   registerPlayer() {
     this.props.clickButton(this.state.name);
+    this.setState({name: ''});
   }
 
   render() {

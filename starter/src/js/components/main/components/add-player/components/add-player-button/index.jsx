@@ -5,11 +5,11 @@ import style from "./style.css";
 const AddPlayerButton = ({clickButton}) => {
 
   return (
-      <button onClick={clickButton} className={style.addPlayerButton}>+</button>
+      <button type='button' onClick={clickButton} className={style.addPlayerButton}>+</button>
   );
 }
 
-AddPlayer.propTypes = {
+AddPlayerButton.propTypes = {
   clickButton: PropTypes.func.isRequired,
 }
 

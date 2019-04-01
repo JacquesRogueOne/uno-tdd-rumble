@@ -5,7 +5,7 @@ const AddPlayerField = ({playerName, onChangePlayerName}) => {
 
   return (
     <div className={style.addPlayerField}>
-        <label id="" for="addPlayerInput">Ajouter un joueur</label>
+        <label id="" htmlFor="addPlayerInput">Ajouter un joueur</label>
         <input id="addPlayerInput" type="text" value={playerName} onChange={onChangePlayerName} />
     </div>
   );

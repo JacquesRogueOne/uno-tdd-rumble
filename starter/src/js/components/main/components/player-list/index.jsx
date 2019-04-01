@@ -2,7 +2,7 @@ import React, {Component} from "react";
 
 import style from "./style.css";
 
-class PlayerList extends Component{
+class PlayerList extends Component {
 
     render() {
         return(

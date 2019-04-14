@@ -5,7 +5,7 @@ import AddPlayer from ".";
 
 const clickButton = jest.fn();
 
-const wrap = () => mount(<AddPlayer clickButton={() => 0} />);
+const wrap = () => mount(<AddPlayer clickButton={clickButton} />);
 
 test("should clear input when the button is clicked", () => {
     const wrapper = wrap();
@@ -15,7 +15,7 @@ test("should clear input when the button is clicked", () => {
     expect(wrapper.state().name).toEqual("");
 })
 
-test("tot", () => {
+test("should call clickButton when we add player", () => {
     clickButton.mockClear();
     const wrapper = wrap();
     expect(clickButton).toHaveBeenCalledTimes(0);

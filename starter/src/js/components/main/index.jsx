@@ -14,15 +14,18 @@ class Main extends Component {
   }
 
   clickButton(value) {
-    const {players} = this.state;
-    this.setState({players: [...players, value]});
+    if (value) {
+      const {players} = this.state;
+      this.setState({players: [...players, value]}); 
+    }
   }
 
   render() {
+    const {players} = this.state; 
     return (
       <main>
         <AddPlayer clickButton={this.clickButton} />
-        {/* <PlayerList /> */}
+        {this.state.players.length > 0 && <PlayerList players={players} propsTest="MED"/>}
       </main>
     );
   }

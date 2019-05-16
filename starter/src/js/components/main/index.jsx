@@ -25,7 +25,7 @@ class Main extends Component {
     return (
       <main>
         <AddPlayer clickButton={this.clickButton} />
-        {this.state.players.length > 0 && <PlayerList players={players} propsTest="MED"/>}
+        {this.state.players.length > 0 && <PlayerList players={players}/>}
       </main>
     );
   }

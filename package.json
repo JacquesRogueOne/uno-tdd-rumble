@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && node server.js",
+    "start": "node server.js",
     "start:dev": "webpack-dev-server --open --mode development",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "postinstall": "npm run build"
   },
   "keywords": [],
   "author": "",

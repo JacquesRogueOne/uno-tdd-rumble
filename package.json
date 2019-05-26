@@ -10,7 +10,8 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors",
     "build": "webpack --mode production",
-    "postinstall": "npm run build"
+    "postinstall": "npm run build",
+    "heroku-postbuild": "webpack -p"
   },
   "keywords": [],
   "author": "",

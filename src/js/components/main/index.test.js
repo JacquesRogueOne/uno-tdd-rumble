@@ -64,3 +64,10 @@ test('should display every players contained in the players list', () => {
   });
   
 });
+
+test('should remove a player from the list', () => {
+  const wrapper = wrapMount();
+  wrapper.setState({players: ['dick']});
+  wrapper.instance().removePlayerAt(0);
+  expect(wrapper.state().players).toEqual(([]));
+});

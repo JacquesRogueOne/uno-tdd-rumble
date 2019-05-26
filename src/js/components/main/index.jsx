@@ -10,21 +10,28 @@ class Main extends Component {
       players: []
     };
 
-    this.clickButton = this.clickButton.bind(this);
+    this.addPlayer = this.addPlayer.bind(this);
   }
 
-  clickButton(value) {
+  addPlayer(value) {
     if (value) {
       const {players} = this.state;
       this.setState({players: [...players, value]}); 
     }
   }
 
+  removePlayerAt(index) {
+    const {players} = this.state;
+    const tmpPlayers =  players.slice();
+    tmpPlayers.splice(index, 1);
+    this.setState({players: tmpPlayers});
+  }
+
   render() {
     const {players} = this.state; 
     return (
       <main>
-        <AddPlayer clickButton={this.clickButton} />
+        <AddPlayer clickButton={this.addPlayer} />
         {this.state.players.length > 0 && <PlayerList players={players}/>}
       </main>
     );

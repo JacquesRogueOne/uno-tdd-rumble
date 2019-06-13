@@ -9,8 +9,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors",
-    "build": "webpack --mode production",
-    "postinstall": "npm run build"
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
@@ -39,10 +38,8 @@
     "redux": "^4.0.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
-    "webpack-dev-server": "^3.1.14"
-  },
-  "dependencies": {
-    "webpack": "^4.32.0",
+    "webpack-dev-server": "^3.6.0",
+    "webpack": "^4.33.0",
     "webpack-cli": "^3.3.2"
   }
 }

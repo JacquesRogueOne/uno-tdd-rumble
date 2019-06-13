@@ -8,7 +8,6 @@ COPY .babelrc /app
 COPY image /app/image
 COPY index.html /app
 COPY server.js /app
-COPY bundle.js /app
 
 COPY package.json /app
 COPY webpack.config.js /app

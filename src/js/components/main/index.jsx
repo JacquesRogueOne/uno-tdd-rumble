@@ -11,9 +11,11 @@ class Main extends Component {
     };
 
     this.addPlayer = this.addPlayer.bind(this);
+    this.removePlayerAt = this.removePlayerAt.bind(this);
   }
 
   addPlayer(value) {
+    console.log('coucou');
     if (value) {
       const {players} = this.state;
       this.setState({players: [...players, value]}); 
@@ -21,6 +23,7 @@ class Main extends Component {
   }
 
   removePlayerAt(index) {
+    console.log('bye bye');
     const {players} = this.state;
     const tmpPlayers =  players.slice();
     tmpPlayers.splice(index, 1);
@@ -32,7 +35,7 @@ class Main extends Component {
     return (
       <main>
         <AddPlayer clickButton={this.addPlayer} />
-        {this.state.players.length > 0 && <PlayerList players={players}/>}
+        {this.state.players.length > 0 && <PlayerList players={players} removePlayerAt={this.removePlayerAt}/>}
       </main>
     );
   }

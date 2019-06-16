@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import style from "./style.css";
 
 const AddPlayerButton = ({clickButton}) => {
 
   return (
-      <button type='button' onClick={clickButton} className={style.addPlayerButton}>+</button>
+      <button type='button' onClick={clickButton} className="addPlayerButton">+</button>
   );
 }
 

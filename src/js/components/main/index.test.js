@@ -24,7 +24,8 @@ test('players is empty when application start', () => {
 test('add player\'s name to the list', () => {
   const wrapper = wrapMount();
   wrapper.find('AddPlayer').setState({name: 'dick'});
-  wrapper.find('button').simulate('click');
+  wrapper.find('button.addPlayerButton').simulate('click');
+ 
   expect(wrapper.state().players).toEqual(['dick']);
 });
 
@@ -46,7 +47,7 @@ test('should display the first player\'s name in the list', () => {
   const wrapper = wrapMount();
   wrapper.find('Main').setState({players: ['wissem']});
   
-  const firstPlayerName = wrapper.find('PlayerList').find('li').at(0);
+  const firstPlayerName = wrapper.find('PlayerList').find('li span').at(0);
   
   expect(firstPlayerName.text()).toEqual('wissem');
 });
@@ -57,10 +58,24 @@ test('should display every players contained in the players list', () => {
 
   wrapper.find('Main').setState({players: playerNames});
   
-  const playerList = wrapper.find('PlayerList').find('li');
+  const playerList = wrapper.find('PlayerList').find('li span');
 
   playerList.forEach((player, index) => {
     expect(player.text()).toEqual(playerNames[index]);
   });
   
+});
+
+test('should remove a player from the list', () => {
+  const wrapper = wrapMount();
+  wrapper.setState({players: ['dick']});
+  wrapper.instance().removePlayerAt(0);
+  expect(wrapper.state().players).toEqual(([]));
+});
+
+test('should remove the second player from the list', () => {
+  const wrapper = wrapMount();
+  wrapper.setState({players: ['dick', 'jason']});
+  wrapper.instance().removePlayerAt(1);
+  expect(wrapper.state().players).toEqual((['dick']));
 });

@@ -20,12 +20,9 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          {
-            loader: "sass-loader",
-            options: {
-              sourceMap: true
-            }
-          }
+          'style-loader',
+          'css-loader',
+          'sass-loader'
         ]
       },
       {

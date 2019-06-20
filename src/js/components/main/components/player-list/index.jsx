@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 
-import style from './style.css';
-
 class PlayerList extends Component {
 
   render() {
@@ -10,7 +8,7 @@ class PlayerList extends Component {
     return(
       <div>
         <h2>LISTE DES JOUEURS</h2>
-        <ul className={style.playerList}>
+        <ul className="playerList">
           {players.map(
             (player, index) => 
               <li key={player}>

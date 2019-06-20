@@ -1,0 +1,32 @@
+@import './components/main/components/add-player/components/add-player-button/_style.scss';
+@import './components/main/components/add-player/components/add-player-field/_style.scss';
+@import './components/main/components/add-player/_style.scss';
+@import './components/main/components/player-list/_style.scss';
+
+  body{
+    margin: 0;
+    font-family: 'Arial';
+  }
+  
+  header{
+    background-color: #ed1c24;
+    text-align: center;
+    padding: 10px;
+
+    img{
+        height: 50px;
+      }
+  }
+  
+  main{
+    padding: 25px;
+  }
+  
+  h2 {
+    text-transform: uppercase;
+    display: block;
+    color: grey;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: normal;
+  }

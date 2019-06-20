@@ -14,7 +14,7 @@ class PlayerList extends Component {
           {players.map(
             (player, index) => 
               <li key={player}>
-                <button type="button" onClick={removePlayerAt(index)}>-</button>
+                <button type="button" onClick={() => removePlayerAt(index)}>-</button>
                 <span>{player}</span>
               </li>)
           }

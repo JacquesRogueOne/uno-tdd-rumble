@@ -15,7 +15,6 @@ class Main extends Component {
   }
 
   addPlayer(value) {
-    console.log('coucou');
     if (value) {
       const {players} = this.state;
       this.setState({players: [...players, value]}); 
@@ -23,7 +22,6 @@ class Main extends Component {
   }
 
   removePlayerAt(index) {
-    console.log('bye bye');
     const {players} = this.state;
     const tmpPlayers =  players.slice();
     tmpPlayers.splice(index, 1);

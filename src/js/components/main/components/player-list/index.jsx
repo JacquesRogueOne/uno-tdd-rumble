@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserMinus } from '@fortawesome/free-solid-svg-icons';
 
 class PlayerList extends Component {
 
@@ -12,7 +14,9 @@ class PlayerList extends Component {
           {players.map(
             (player, index) => 
               <li key={player}>
-                <button type="button" onClick={() => removePlayerAt(index)}>-</button>
+                <button type="button" onClick={() => removePlayerAt(index)}>
+                  <FontAwesomeIcon icon={faUserMinus}></FontAwesomeIcon>
+                </button>
                 <span>{player}</span>
               </li>)
           }
